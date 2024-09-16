@@ -1,0 +1,17 @@
+from aws_cdk import (
+    Stack,
+    aws_ec2 as ec2,
+    aws_iam as iam,
+    DefaultSynthesizer,
+)
+from constructs import Construct
+
+class CdkProjectPythonStack(Stack):
+    def __init__(self, scope: Construct, id: str, **kwargs) -> None:
+        super().__init__(scope, id, **kwargs)
+
+	synthesizer = DefaultStackSynthesizer(
+		file_assets_bucket_name = "qweqwieiwuieoqwuierp"
+		bucket_prefix="",
+                cloud_formation_execution_role="arn:aws:iam::263293409914:role/LabRole",
+
